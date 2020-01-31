@@ -1,0 +1,9 @@
+= $code(search_epoch)
+  [.config]
+@link[guide >index group=site]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[pintail]
+search_epoch = $var(epoch)

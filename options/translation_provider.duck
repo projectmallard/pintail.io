@@ -1,0 +1,10 @@
+= $code(translation_provider)
+  [.config]
+@link[guide >index group=site]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[pintail]
+translation_provider = $var(classname)
+

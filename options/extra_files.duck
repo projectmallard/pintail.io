@@ -1,0 +1,10 @@
+= $code(extra_files)
+  [.config]
+@link[guide >index group=dir]
+@desc List additional files to copy to the production site.
+
+[synopsis]
+[code ini]
+$[$var(/some/dir/)]
+extra_files = $var(file1 file2 file3 ...)
+

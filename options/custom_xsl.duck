@@ -1,0 +1,9 @@
+= $code(custom_xsl)
+  [.config]
+@link[guide >index group=site]
+@desc Override XSLT templates to implement features and provide common site content.
+
+[synopsis]
+[code ini]
+$[pintail]
+custom_css = $var(myxslfile).xsl

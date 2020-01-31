@@ -1,0 +1,9 @@
+= $code(docbook)
+  [.config]
+@link[guide >index group=dir]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[pintail]
+docbook = $var(filename).xml

@@ -1,0 +1,66 @@
+= Basic Configuration
+@link[guide >index]
+
+All the configuration for your site in contained in the $file(pintail.cfg) file.
+The directory that contains this file is considered to be the root of your
+source tree. To create a sample config file, run $cmd(pintail init).
+
+Here is an example minimal configuration file:
+
+[code ini]
+  $[pintail]
+  html_extension = .html
+  link_extension =
+  custom_xsl = mysite.xsl
+
+  $[local]
+  link_extension = .html
+
+  $[/]
+  extra_files = mysitelogo.png
+
+Site-wide configuration options are stored in the $code([pintail]) section.
+You can also override site-wide options for local builds in the $code([local])
+section. These settings will take precedence when you run Pintail with
+$cmd(pintail build --local). This is useful for previewing builds on your
+local machine without running a web server.
+
+In this example, we've set both the $code[>html_extension](html_extension) and
+$code[>link_extension](link_extension) options. The $code(html_extension) option
+is set to $code(.html). This is the default setting, but we've set it explicitly
+to illustrate the difference with $code(link_extension). When files are output,
+the actual files will have the $code(.html) extension. However, any links to
+those files will not have an extension appended because $code(link_extension)
+is set to the empty string. This is a common practice to make cleaner URLs.
+
+Linking to files without the extension only works when you use a web server
+that supports rewriting URLs. When viewing files locally, you must use the
+exact file name. So in this example, we set $code(link_extension) to
+$code(.html) for local builds.
+
+Pintail builds on the $link[>>http://yelp.io/](Yelp) documentation framework.
+Yelp provides XSLT stylesheets to render $link[>>http://projectmallard.org/](Mallard)
+and $link[>>http://docbook.org/](DocBook) documents using a common HTML layer.
+The default HTML output of Pintail is nearly the same as the default output
+of the Yelp XSLT stylesheets. You can configure every aspect of the HTML
+output by providing a custom XSLT file.
+
+Specify a custom XSLT file with the $code[>custom_xsl](custom_xsl) option.
+This should point to an XSLT file relative to the root of your source tree.
+View the $link[>>http://yelp.io/xsl/](Yelp XSLT reference) to see which
+templates and modes you can implement. When creating a custom XSLT file,
+you do not need to import or include the Yelp XSLT stylesheets. Pintail
+automatically creates an XSLT driver file that includes your customizations
+and imports Yelp XSLT.
+
+Finally, some configuration options can be set on a per-directory basis.
+To do this, name a section after the directory path, relative to the root,
+including leading and trailing slashes. In this example, we've specified
+that for the root directory ($code([/])), we want to copy $code(mysitelogo.png)
+into the output directory. Note that you do not need to specify media files
+referenced in your pages. Pintail finds these automatically. But if, for
+example, you use graphics referenced in your XSLT customization for common
+site headers or footers, you need to include them specifically.
+
+
+

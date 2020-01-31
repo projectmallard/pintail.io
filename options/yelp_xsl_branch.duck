@@ -1,0 +1,9 @@
+= $code(yelp_xsl_branch)
+  [.config]
+@link[guide >index group=site]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[pintail]
+yelp_xsl_branch = $var(branch)

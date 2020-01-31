@@ -1,0 +1,50 @@
+body {
+  font-family: 'Lato', sans;
+  font-size: 14px;
+}
+div.top {
+  color: white;
+  text-align: center;
+  font-family: 'Special Elite', serif;
+  background-size: 30px 30px;
+  background-color: #f57900;
+  background-image:
+  linear-gradient(
+    rgba(255, 255, 255, .05), rgba(255, 255, 255, .05) 1px,
+    transparent 1px, transparent),
+  linear-gradient(90deg,
+    rgba(255, 255, 255, .05), rgba(255, 255, 255, .05) 1px,
+    transparent 1px, transparent),
+  linear-gradient(
+    transparent, transparent 15px,
+    rgba(255, 255, 255, .1) 15px, rgba(255, 255, 255, .1) 16px,
+    transparent 16px, transparent),
+  linear-gradient(90deg,
+    transparent, transparent 15px,
+    rgba(255, 255, 255, .1) 15px, rgba(255, 255, 255, .1) 16px,
+    transparent 16px, transparent);
+  border-bottom: solid 1px #ce5c00;
+}
+div.top div.contents {
+  padding: 40px 0;
+  background-image: linear-gradient(90deg,
+    transparent, rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0.1) 70%, transparent);
+}
+div.top div.sitetitle {
+  font-size: 72px;
+  margin: 0; padding: 0;
+  text-shadow: 1px 1px 0 #ce5c00;
+  letter-spacing: 0.2em;
+}
+div.top div.sitedesc {
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  margin: 0; padding: 0;
+  text-shadow: 1px 1px 0 #ce5c00;
+}
+div.pt-features {
+  font-size: 2em;
+}
+div.pt-features div.title {
+  font-size: 1.2em;
+}

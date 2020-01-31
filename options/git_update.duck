@@ -1,0 +1,9 @@
+= $code(git_update)
+  [.config]
+@link[guide >index group=dir]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[$var(/some/dir/)]
+git_update = $var(true or false)

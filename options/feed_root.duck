@@ -1,0 +1,9 @@
+= $code(feed_root)
+  [.config]
+@link[guide >index group=dir]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[$var(/some/dir/)]
+feed_root = $var(url)

@@ -1,0 +1,9 @@
+= $code(editor_mode)
+  [.config]
+@link[guide >index group=dir]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[$var(/some/dir/)]
+editor_mode = $var(true or false)

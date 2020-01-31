@@ -1,0 +1,9 @@
+= $code(source_lang)
+  [.config]
+@link[guide >index group=site]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[pintail]
+source_lang = $var(lang)

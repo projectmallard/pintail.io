@@ -1,0 +1,5 @@
+= pintail.git
+@link[guide >index group=builtin]
+@desc Import documents from other git repositories
+
+* $link[>>https://github.com/projectmallard/pintail]

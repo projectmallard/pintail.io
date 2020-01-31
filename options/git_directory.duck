@@ -1,0 +1,9 @@
+= $code(git_directory)
+  [.config]
+@link[guide >index group=dir]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[$var(/some/dir/)]
+git_directory = $var(directory)

@@ -1,0 +1,97 @@
+= pintail-elasticsearch
+  [guide]
+@link[guide >index group=external]
+@desc Use ElasticSearch as a search provider
+
+* $link[>>https://github.com/projectmallard/pintail-elasticsearch]
+
+[steps]
+* Install Elasticsearch.
+  These instructions were tested against Elasticsearch 6.1.1.
+
+  $link[>>https://www.elastic.co/downloads/elasticsearch]
+
+  [screen]
+  curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.1.1.rpm
+  sudo dnf install elasticsearch-6.1.1.rpm
+
+* Install X-Pack.
+  X-Pack provides security features that allow you to safely expose your Elasticsearch cluster to the world.
+
+  $link[>>https://www.elastic.co/downloads/x-pack]
+
+  [note]
+  The instructions on this page refer to $file(bin/elasticsearch-plugin).
+  If you have installed using an RPM, this file is located at
+  $file(/usr/share/elasticsearch/bin/elasticsearch-plugin).
+
+  [screen]
+  /usr/share/elasticsearch/bin/elasticsearch-plugin install x-pack
+
+* Start Elasticsearch
+
+  [screen]
+  systemctl start elasticsearch
+
+
+[--
+separate pages for:
+* configuring pintail-es
+* setting search domains
+* configuring es+xpack
+* configuring es+???
+--]
+
+[--
+enable cors
+bin/x-pack/setup-passwords interactive
+set user/pass in pintail.cfg
+need password for reading?
+
+* install kibana:
+
+  https://www.elastic.co/guide/en/kibana/current/rpm.html
+
+* Edit /etc/kibana/kibana.yml :
+
+  elasticsearch.url: "http://localhost:9200"
+  elasticsearch.username: "elastic"
+  elasticsearch.password: "PASSWORD"
+
+/usr/share/kibana/bin/kibana-plugin install x-pack
+
+systemctl start kibana
+
+http://localhost:5601
+
+* Click $gui(Management) in the sidebar.
+* Under $gui(Security), click $gui(Users).
+* Select the $gui(Roles) tab.
+* Click $gui(Create role).
+* Enter $input(pintail) for the name.
+* Under $gui(Index Privileges), enter $input(*) for $gui(Indices).
+  Then select $gui(all) for $gui(Privileges).
+
+* Select the $gui(Users) tab.
+* Click $gui(Create user).
+* Enter $input(pintail) for the name.
+* Choose a password.
+* Kibana requires a full name and email address. Make something up.
+* Select $gui(pintail) for $gui(Roles).
+
+* Select the $(Roles) tab.
+* Click $gui(Create role).
+* Enter $input(pintail_read) for the name.
+* Under $gui(Index Privileges), enter a pattern that matches FIXME
+  for $gui(Indices).
+  Then select $gui(read) for $gui(Privileges).
+
+* /etc/elasticsearch/elasticsearch.yml:
+
+  [screen]
+  xpack.security.authc:
+    anonymous:
+      roles: pintail_read
+
+* sudo systemctl restart elasticsearch
+--]

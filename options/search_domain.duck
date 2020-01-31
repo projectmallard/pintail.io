@@ -1,0 +1,9 @@
+= $code(search_domain)
+  [.config]
+@link[guide >index group=dir]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[$var(/some/dir/)]
+search_domain = $var(domain)

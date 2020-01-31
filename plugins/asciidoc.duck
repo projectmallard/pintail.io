@@ -1,0 +1,5 @@
+= pintail-asciidoc
+@link[guide >index group=external]
+@desc Include AsciiDoc files in your Pintail site
+
+* $link[>>https://github.com/projectmallard/pintail-asciidoc]

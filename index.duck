@@ -1,0 +1,12 @@
+= Pintail
+  [guide]
+
+
+Pintail is a static documentation site generator built on
+$link[>>http://projectmallard.org/](Mallard) and $link[>>http://yelp.io/](Yelp).
+
+[links topic groups="#first #default #last"]
+
+[links topic groups=plugins .linklist]
+. Plugins
+

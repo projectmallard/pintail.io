@@ -1,0 +1,9 @@
+= $code(custom_css)
+  [.config]
+@link[guide >index group=site]
+@desc Provide custom CSS as a standalone file, outside the XSLT customization.
+
+[synopsis]
+[code ini]
+$[pintail]
+custom_css = $var(mycssfile).css

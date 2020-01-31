@@ -1,0 +1,10 @@
+= Plugins
+  [guide]
+@link[guide >/index]
+@title[link role=topic] List of Official Plugins
+
+[links topic groups=builtin]
+. Built-in Plugins
+
+[links topic groups=external]
+. External Plugins

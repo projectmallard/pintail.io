@@ -1,0 +1,13 @@
+= Options
+  [guide]
+@link[guide >/index]
+@title[link role=topic] List of Configuration Options
+
+[links topic groups=site]
+. Site-Wide Options
+
+[links topic groups=dir]
+. Directory-Level Options
+
+[links topic groups="#first #default #last"]
+. Other Options

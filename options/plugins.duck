@@ -1,0 +1,10 @@
+= $code(plugins)
+  [.config]
+@link[guide >index group=site]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[pintail]
+plugins = $var(plugins)
+

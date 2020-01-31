@@ -1,0 +1,9 @@
+= $code(search_elastic_user)
+  [.config]
+@link[guide >index group=site]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[pintail]
+search_elastic_user = $var(user)

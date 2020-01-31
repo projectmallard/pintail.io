@@ -1,0 +1,10 @@
+= $code(itstool_batch_dirs)
+  [.config]
+@link[guide >index]
+@link[guide >/plugins/itstool]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[pintail]
+translation_provider = pintail.itstool.ItstoolTranslationProvider

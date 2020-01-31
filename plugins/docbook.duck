@@ -1,0 +1,5 @@
+= pintail.docbook
+@link[guide >index group=builtin]
+@desc Include DocBook files in your Pintail site
+
+* $link[>>https://github.com/projectmallard/pintail]

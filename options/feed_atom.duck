@@ -1,0 +1,9 @@
+= $code(feed_atom)
+  [.config]
+@link[guide >index group=dir]
+@desc FIXME
+
+[synopsis]
+[code ini]
+$[$var(/some/dir/)]
+feed_atom = $var(filename)

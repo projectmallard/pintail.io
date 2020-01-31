@@ -1,0 +1,9 @@
+= $code(html_extension)
+  [.config]
+@link[guide >index group=site]
+@desc Set the extension used on HTML output files.
+
+[synopsis]
+[code ini]
+$[pintail]
+html_extension = $var(.html)

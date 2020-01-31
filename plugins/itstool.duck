@@ -1,0 +1,12 @@
+= pintail-itstool
+  [guide]
+@link[guide >index group=external]
+@desc Use ITS Tool as a translation provider
+
+* $link[>>https://github.com/projectmallard/pintail-itstool]
+
+[synopsis]
+[code ini]
+$[pintail]
+translation_provider = pintail.itstool.ItstoolTranslationProvider
+
